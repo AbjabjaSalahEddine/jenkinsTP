@@ -8,6 +8,7 @@
   <artifactId>my-app</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
+  
   <name>my-app</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -52,6 +53,9 @@
                    <groupId>org.apache.maven.plugins</groupId>
                    <artifactId>maven-war-plugin</artifactId>
                    <version>3.3.2</version>
+                    <configuration>
+                      <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
