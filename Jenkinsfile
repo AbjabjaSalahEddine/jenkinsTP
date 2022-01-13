@@ -1,6 +1,6 @@
 pipeline {
     environment {
-    registry = "docker_hub_account/repository_name"
+    registry = "salaheddinebj20000924/tpdevops"
     registryCredential = 'dockerhub'
     dockerImage = ''
     }
