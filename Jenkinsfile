@@ -2,6 +2,7 @@ pipeline {
     environment {
     registry = "salaheddinebj20000924/tpdevops"
     registryCredential = 'dockerhub'
+    dockerImage = ''
     }
     agent any
 
