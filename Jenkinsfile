@@ -2,16 +2,15 @@ pipeline {
     environment {
     registry = "salaheddinebj20000924/tpdevops"
     registryCredential = 'dockerhub'
-    dockerImage = ''
     }
     agent any
 
 
     stages {
         stage('Build') {
-         steps {
-            sh 'mvn package'
-            }
+            steps {
+                sh 'mvn package'
+                }
         }
         stage('Building image') {
             steps{
@@ -21,13 +20,13 @@ pipeline {
                 }
         }
         stage('Deploy Image') {
-                steps{
-                    script {
-                        docker.withRegistry( '', registryCredential ) {
-                        dockerImage.push()
-                        }
+            steps{
+                script {
+                    docker.withRegistry( '', registryCredential ) {
+                    dockerImage.push()
                     }
                 }
-}
-}
+            }
+        }
+    }
 }
